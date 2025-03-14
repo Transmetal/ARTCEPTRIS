@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 50px;
+    background-color: #000000;
+    background-size: cover;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* Default scrollbar width */
+    scrollbar-color: #11999E #f8f9fa; /* Scrollbar color */
+}
+
+.jumbotron{
+    position: relative;
+    right: 210px;
+    top: -40px;
+    width: 1530px;
+    background-color: #000000;
+    color: #ffffff
+}
+/* Scrollbar styles */
+body::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Thumb color */
+    border-radius: 10px; /* Rounding of the thumb */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #000000; /* Track color */
+    border-radius: 10px; /* Rounding of the track */
+}
+
+h1 {
+    color: #ffffff;
+    /* Bootstrap primary color */
+}
+
+.table-responsive{
+    position: relative;
+    bottom: 130px;
+    right: 210px;
+    width: 1530px;
+}
+
+.form-group{
+    position: relative;
+    top: -120px;
+    left: -180px
+}
+
+.form-check{
+    bottom: 120px;
+    left: -180px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #11999E;
+    color: #fff;
+}
+
+td {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-cancel {
+    color: #fff;
+    background-color: #dc3545;
+    /* Bootstrap danger color */
+    border-color: #dc3545;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.8);
+
+}
+
+.btn-cancel:hover {
+    color: #fff;
+    background-color: #bd2130;
+    /* Darker red for hover effect */
+    border-color: #bd2130;
+}
+
+.btn-primary{
+    position: relative;
+    background-color: #000000;
+    border-color: #000000;
+    top: -120px;
+    left: -180px;
+}
+

@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+      /* background: linear-gradient(90deg, #323232 0%, #0D7377 50%, rgb(62, 215, 246) 100%);  */ 
+     background-color:rgb(0, 0, 0);
+     background-repeat: no-repeat;
+     background-size:auto;
+     background-attachment: fixed;
+     background-blend-mode: soft-light;
+}
+
+h2{
+    color: #ffffff;
+}
+
+h5{
+    color: #ffffff;
+}
+
+h6{
+    color: #ffffff;
+}
+
+.checkbox{
+    color: #ffffff;
+}
+.container {
+    position: relative;
+    right: 220px;
+    width: 1000px;
+    background-color: #000000;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.checkbox-limit-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.card-header h4 {
+    color: #000000;
+}
+.p-2 {
+border-radius: 10px;
+background-color: #000000;
+color: #ffffff;
+}
+
+.p-2:hover {
+    background-color: #000000; 
+    border : 3px solid #00f2ff;
+}
+
+
+.btn-primary {
+    background-color: #000000;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-limit-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.card-header{
+    background-color:#000000;
+    border-radius: 5px;
+}
+
+.card-body{
+    background-color:#000000;
+    border-radius: 5px;
+    border-right: 2px solid #00f2ff;
+    border-left: 2px solid #00f2ff;
+}
+
+.cta-button {
+display: inline-block;
+padding: 10px 20px;
+width: 100%;
+background-color: #539699;
+color: #fff;
+text-decoration: none;
+border-radius: 4px;
+/* font-weight: bold; */
+font-size: 18px;
+text-align: center;
+transition: background-color 0.3s;
+}
+
+.cta-button:hover{
+background: rgb(20, 147, 220);
+color:#fff;
+}
+img{
+
+max-width: 100%; 
+height: auto;
+display: block; 
+margin: 0 auto; 
+border-radius: 10px;
+
+}
+
+/*Infotainment*/
+
+.card2 {
+    position: relative;
+    bottom: 2400px;
+    left: 1060px;
+    background: #000000;
+    width: 350px;
+    height: 70px;
+    padding: 20px;
+    margin-bottom: 250px;
+    color: white;
+    transform: rotate(0deg) skewY(0deg) translateX(-0px);
+    box-shadow: -10px 10px 20px #00f2ff;
+    position: relative;
+    transition: all 4s;
+ }
+ 
+ .card2:hover {
+    background: #ffffff;
+    box-shadow: none;
+ }
+ 
+ .card2:hover h3{
+    transition: 3s;
+    color: #000000;
+ }
+ 
+ .card2::before,
+ .card2::after {
+    content: '';
+    position: absolute;
+    background: #30475e;
+ }
+ 
+ .card2::before {
+    top: -20px;
+    left: -10px;
+    width: 100%;
+    height: 20px;
+    transform: rotate(0deg) skewX(45deg);
+ }
+ 
+ .card2::after {
+    top: -10.1px;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    transform: rotate(0deg) skewY(45deg);
+ }
+ 
+ @media (max-width: 768px) {
+    .card2 {
+        position: static; /* Atur ulang posisi agar lebih responsif */
+        width: 100%; /* Sesuaikan lebar dengan layar */
+        margin: 20px auto; /* Tambahkan margin antar elemen */
+        transform: none; /* Hilangkan rotasi untuk layar kecil */
+    }
+    .card2:hover{
+       transform: none;
+    }
+    .card2::before, .card2::after{
+       background: none;
+    }
+ }
+ 
+ @media (max-width: 650px) {
+    .form-container {
+        padding: 5px; /* Kurangi padding lebih lanjut untuk layar kecil */
+    }
+ 
+    .form-container form {
+        width: 100%; /* Ambil seluruh lebar layar */
+    }
+ 
+    .card2 {
+        margin: 10px 0; /* Kurangi margin antar elemen */
+    }
+ }
+ 
+ /* Effect */
+ .p1{
+    position: relative;
+    left: 25px;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin-right: 50px;
+ }
+ 
+ .p1:hover{
+    background: #00f2ff;
+    color: #000000;
+    box-shadow: 0 0 5px #00f2ff,
+                0 0 25px #00f2ff,
+                0 0 50px #00f2ff,
+                0 0 200px #00f2ff;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+ }
+ 
+ .p1 span{
+    position: absolute;
+    display: block;
+ }
+ .p1 span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent, #00f2ff);
+    animation: animate1 1s linear infinite;
+ }
+ @keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+ }
+ .p1 span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent, #00f2ff);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+ }
+ @keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+ }
+ .p1 span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent, #00f2ff);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+ }
+ @keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+ }
+ 
+ 
+ .p1 span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent, #00f2ff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+ }
+ @keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+ }
+ 
+ @media (max-width: 650px) {
+    .p1 {
+       position: relative;
+       left: 0px; /* Set ulang posisi */
+       text-align: left; /* Pastikan teks sejajar di kiri */
+       margin-left: 0; /* Kurangi jarak tambahan */
+       margin-right: auto; /* Pastikan elemen tidak terpusat */
+       letter-spacing: 1px;
+   } 
+ }
+ 
+ 
+ 
