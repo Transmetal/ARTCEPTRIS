@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+.container{
+    overflow: hidden;
+}
+
+/* ERROR */
+.container form .error-msg{
+    margin:10px 0;
+    display: block;
+    background: crimson;
+    color:#fff;
+    border-radius: 10px;
+    font-size: 20px;
+    padding:10px;
+    text-align: center;
+ }
+/* ERROR */
+
+/* NOTE */
+.container form .note{
+    margin:10px 0;
+    display: block;
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    color:#fff;
+    border-radius: 10px;
+    font-size: 20px;
+    padding:10px;
+    text-align: center;
+ }
+/* NOTE */
+
+
+
+
+
+.container{
+    min-height: 100vh;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.container form{
+    position: relative;
+    right: 400px;
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 40px;
+    width: 600px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color: #ffffff;
+    padding-bottom: 5px;
+    font-weight:500;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#fff;
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn, 
+.cancel-btn{
+    width: 100%;
+    background:linear-gradient(45deg, #176B87, #64CCC5);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    left: 120px;
+    top: 100px;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    backdrop-filter: blur(2px) saturate(179%);
+    -webkit-backdrop-filter: blur(2px) saturate(179%);
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .container form {
+        width: 90%;
+    }
+
+    .container .card-container {
+        width: 90%;
+    }
+}
+
+.radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #000000;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 0.25rem;
+    width: 300px;
+    font-size: 14px;
+    left: 100px;
+  }
+  
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: #ffffff;
+    transition: all .15s ease-in-out;
+  }
+
+  .radio-inputs .radio .name:hover{
+    color:#03e9f4;
+  }
+
+  
+  .radio-inputs .radio input:checked + .name {
+    background-color: #5b6565;
+    font-weight: 600;
+  }
+
+  .back-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.back-btn:hover {
+    background-color: #2a2a2a; /* Darker green on hover */
+}
+
+
+/* Card Container 2*/
+
+.card-container2{
+    position: relative;
+    bottom: 600px;
+    left: 1200px;
+}
+
+.card1 {
+    position: relative;
+    right: 1030px;
+    top: 320px;
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    width: 500px;
+    height: 70px;
+    padding: 20px;
+    margin-bottom: 250px;
+    border-radius: 5px;
+    color: #ffffff;
+    position: relative;
+    transition: all 4s;
+ }
+ 
+ .card1:hover {
+    transform: rotate(0deg) skewY(0deg) translateY(-150px);
+    background: #000000;
+    box-shadow: none;
+    box-shadow: -10px 10px 20px rgba(75, 223, 234, 0.5);
+ }
+ 
+ .card1:hover h3{
+    transition: 3s;
+    color: #ffffff;
+ }
+ 
+ .card1::before {
+    top: -20px;
+    left: -10px;
+    width: 100%;
+    height: 20px;
+    transform: rotate(0deg) skewX(45deg);
+ }
+ 
+ .card1::after {
+    top: -10.1px;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    transform: rotate(0deg) skewY(45deg);
+ }
+ 
+ @media (max-width: 768px) {
+ 
+    .card-container1 {
+        display: flex;
+        flex-direction: column; /* Susun kartu secara vertikal */
+        align-items: center; /* Pusatkan elemen kartu */
+        gap: 20px; /* Tambahkan jarak antar kartu */
+        width: 100%; /* Gunakan seluruh lebar layar */
+        margin-top: 20px; /* Jarak dengan form */
+    }
+ 
+    .card1,
+    .card2,
+    .card3 {
+        width: 90%; /* Sesuaikan lebar kartu */
+        max-width: 400px; /* Tetapkan batas maksimal lebar */
+        padding: 15px;
+        background: #ffffff; /* Warna latar bersih */
+        border-radius: 10px; /* Sudut melengkung */
+        text-align: center; /* Pusatkan konten kartu */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+    }
+    
+    .p1:hover, .p2:hover, .p3:hover{
+       background: #000000;
+    }
+ }
+ 
+ @media (max-width: 480px) {
+ 
+    .card1,
+    .card2,
+    .card3 {
+        width: 95%; /* Gunakan hampir seluruh lebar layar */
+        font-size: 12px; /* Ukuran teks lebih kecil */
+    }
+ 
+    .card1 h3{
+       position: relative;
+       top: 10px;
+    }
+ 
+    .card2 h3{
+       position: relative;
+       top: 5px;
+    }
+ 
+    .card3 h3{
+       position: relative;
+       top: 5px;
+    }
+ 
+ }
+ 
+ 
+ @media (max-width: 768px) {
+    .card1 {
+        position: static; /* Atur ulang posisi agar lebih responsif */
+        width: 100%; /* Sesuaikan lebar dengan layar */
+        margin: 20px auto; /* Tambahkan margin antar elemen */
+        transform: none; /* Hilangkan rotasi untuk layar kecil */
+    }
+    .card1:hover{
+       transform:  translateY(-80px);
+    }
+    .card1::before, .card::after{
+       background: none;
+    }
+    .card1 {
+       margin: 10px 0; /* Kurangi margin antar elemen */
+    }
+ }
+ 
+ 
+ 
+ /* Effect */
+ .p1{
+    position: relative;
+    left: 25px;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: transparent;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin-right: 50px;
+ }
+ 
+ .p1:hover{
+    color: #03e9f4;
+    background-color: #000000;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+ }
+ 
+ .p1 span{
+    position: absolute;
+    display: block;
+ }
+
+ .p1 span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+ }
+ @keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+ }
+ 
+ 
+ @media (max-width: 650px) {
+    .p1 {
+       position: relative;
+       left: 0px; /* Set ulang posisi */
+       text-align: left; /* Pastikan teks sejajar di kiri */
+       margin-left: 0; /* Kurangi jarak tambahan */
+       margin-right: auto; /* Pastikan elemen tidak terpusat */
+       letter-spacing: 1px;
+   } 
+ }
+ 
+ /* Card 3*/
+ 
+ .card3 {
+    position: relative;
+    top: 80px;
+    right: 1030px;
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    width: 500px;
+    height: 70px;
+    padding: 20px;
+    margin-bottom: 250px;
+    color: #ffffff;
+    position: relative;
+    transition: all 4s;
+    border-radius: 5px;
+ }
+ 
+ .card3:hover {
+    transform: rotate(0deg) skewY(0deg) translateY(100px);
+    background: #000000;
+    box-shadow: none;
+    box-shadow: -10px 10px 20px rgba(75, 223, 234, 0.5);
+ }
+ 
+ .card3:hover h3{
+    transition: 3s;
+    color: #ffffff;
+ }
+ 
+ .card3::before {
+    top: -20px;
+    left: -10px;
+    width: 100%;
+    height: 20px;
+    transform: rotate(0deg) skewX(45deg);
+ }
+ 
+ .card3::after {
+    top: -10.1px;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    transform: rotate(0deg) skewY(45deg);
+ }
+ 
+ @media (max-width: 768px) {
+    .card3 {
+        position: static; /* Atur ulang posisi agar lebih responsif */
+        width: 100%; /* Sesuaikan lebar dengan layar */
+        margin: 20px auto; /* Tambahkan margin antar elemen */
+        transform: none; /* Hilangkan rotasi untuk layar kecil */
+    }
+ 
+    .card3::before, .card::after{
+       background: none;
+    }
+    .card3 {
+       margin: 10px 0; /* Kurangi margin antar elemen */
+    }
+    .card3:hover{
+       transform: none;
+    }
+ }
+ 
+ /* P3 */
+ 
+ .p3{
+    position: relative;
+    left: 25px;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: transparent;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin-right: 50px;
+ }
+ 
+ .p3:hover{
+    color: #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+     background-color: #000000;
+ }
+ 
+ .p3 span{
+    position: absolute;
+    display: block;
+ }
+ .p3 span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+ }
+ @keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+ }
+ .p3 span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+ }
+ @keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+ }
+ .p3 span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+ }
+ @keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+ }
+ 
+ 
+ .p3 span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+ }
+ @keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+ }
+ 
+ @media (max-width: 650px) {
+    .p3 {
+       position: relative;
+       left: 0px; /* Set ulang posisi */
+       text-align: left; /* Pastikan teks sejajar di kiri */
+       margin-left: 0; /* Kurangi jarak tambahan */
+       margin-right: auto; /* Pastikan elemen tidak terpusat */
+       letter-spacing: 1px;
+   } 
+ }
